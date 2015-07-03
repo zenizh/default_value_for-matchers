@@ -14,4 +14,9 @@ Gem::Specification.new do |s|
   s.license     = 'MIT'
 
   s.files       = `git ls-files -z`.split("\x0")
+
+  s.add_dependency 'default_value_for'
+  s.add_dependency 'rspec'
+
+  s.add_development_dependency 'sqlite3'
 end
