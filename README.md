@@ -1,36 +1,61 @@
-# DefaultValueFor::Matchers
+# default_value_for-matchers
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/default_value_for/matchers`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+This gem is a RSpec matchers for [default_value_for](https://github.com/FooBarWidget/default_value_for) gem.
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'default_value_for-matchers'
+group :test do
+  gem 'default_value_for-matchers'
+end
 ```
 
 And then execute:
 
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install default_value_for-matchers
+```
+$ bundle
+```
 
 ## Usage
 
-TODO: Write usage instructions here
+Include `default_value_for/matchers` in your `rails_helper.rb`:
 
-## Development
+```ruby
+require 'default_value_for/matchers'
+```
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake false` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+Then you can use `have_default_value_for` matcher and `with_value`, `and_allow_nil` and `and_disallow_nil` submatchers.
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+For example:
+
+```ruby
+# app/models/user.rb
+class User < ActiveRecord::Base
+  default_value_for :name, 'no name'
+  default_value_for :age, value: 20, allows_nil: false
+end
+
+# spec/models/user.rb
+describe User, type: :model do
+  # name
+  it { is_expected.to have_default_value_for(:name) }
+  it { is_expected.to have_default_value_for(:name).with_value('no name') }
+  it { is_expected.to have_default_value_for(:name).with_value('no name').and_allow_nil }
+
+  # age
+  it { is_expected.to have_default_value_for(:age) }
+  it { is_expected.to have_default_value_for(:age).with_value(20) }
+  it { is_expected.to have_default_value_for(:age).with_value(20).and_disallow_nil }
+end
+```
+
+## ToDo
+
+- [ ] Add spec for this gem
+- [ ] Test with CI as a Service
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/default_value_for-matchers.
-
+Bug reports and pull requests are welcome on GitHub at https://github.com/kami30k/default_value_for-matchers.
