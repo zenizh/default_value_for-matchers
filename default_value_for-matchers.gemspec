@@ -1,31 +1,17 @@
-# coding: utf-8
-lib = File.expand_path('../lib', __FILE__)
-$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
+$:.unshift File.expand_path('../lib', __FILE__)
+
 require 'default_value_for/matchers/version'
 
-Gem::Specification.new do |spec|
-  spec.name          = "default_value_for-matchers"
-  spec.version       = DefaultValueFor::Matchers::VERSION
-  spec.authors       = ["kami"]
-  spec.email         = ["kami30k@gmail.com"]
+Gem::Specification.new do |s|
+  s.name        = 'default_value_for-matchers'
+  s.version     = DefaultValueFor::Matchers::VERSION
+  s.authors     = 'kami'
+  s.email       = 'kami30k@gmail.com'
 
-  spec.summary       = %q{TODO: Write a short summary, because Rubygems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  s.summary     = 'RSpec matchers for default_value_for gem.'
+  s.description = 'RSpec matchers for default_value_for gem.'
+  s.homepage    = 'https://github.com/kami30k/default_value_for-matchers'
+  s.license     = 'MIT'
 
-  # Prevent pushing this gem to RubyGems.org by setting 'allowed_push_host', or
-  # delete this section to allow pushing this gem to any host.
-  if spec.respond_to?(:metadata)
-    spec.metadata['allowed_push_host'] = "TODO: Set to 'http://mygemserver.com'"
-  else
-    raise "RubyGems 2.0 or newer is required to protect against public gem pushes."
-  end
-
-  spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
-  spec.bindir        = "exe"
-  spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
-  spec.require_paths = ["lib"]
-
-  spec.add_development_dependency "bundler", "~> 1.10"
-  spec.add_development_dependency "rake", "~> 10.0"
+  s.files       = `git ls-files -z`.split("\x0")
 end
