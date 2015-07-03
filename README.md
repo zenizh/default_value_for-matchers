@@ -23,13 +23,7 @@ $ bundle
 
 ## Usage
 
-Include `default_value_for/matchers` in your `rails_helper.rb`:
-
-```ruby
-require 'default_value_for/matchers'
-```
-
-Then you can use `have_default_value_for` matcher and `with_value`, `and_allow_nil` and `and_disallow_nil` submatchers.
+You can use `have_default_value_for` matcher and `with_value`, `and_allow_nil`, `and_disallow_nil` submatchers.
 
 For example:
 
