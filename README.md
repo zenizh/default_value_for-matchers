@@ -53,11 +53,6 @@ describe User, type: :model do
 end
 ```
 
-## ToDo
-
-- [ ] Add spec for this gem
-- [ ] Test with CI as a Service
-
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/kami30k/default_value_for-matchers.

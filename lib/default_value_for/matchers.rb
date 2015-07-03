@@ -1,3 +1,5 @@
+require 'rspec'
+
 RSpec::Matchers.define :have_default_value_for do |attribute|
   match do
     @attribute    = attribute.to_s
