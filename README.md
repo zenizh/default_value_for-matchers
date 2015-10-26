@@ -1,6 +1,6 @@
 # default_value_for-matchers
 
-[![Build Status](https://travis-ci.org/kami30k/default_value_for-matchers.svg)](https://travis-ci.org/kami30k/default_value_for-matchers)
+[![Build Status](https://travis-ci.org/kami-zh/default_value_for-matchers.svg)](https://travis-ci.org/kami-zh/default_value_for-matchers)
 [![Gem Version](https://badge.fury.io/rb/default_value_for-matchers.svg)](http://badge.fury.io/rb/default_value_for-matchers)
 
 This gem is a RSpec matchers for [default_value_for](https://github.com/FooBarWidget/default_value_for) gem.
@@ -50,4 +50,4 @@ end
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/kami30k/default_value_for-matchers.
+Bug reports and pull requests are welcome on GitHub at https://github.com/kami-zh/default_value_for-matchers.
