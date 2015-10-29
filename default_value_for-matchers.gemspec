@@ -6,11 +6,11 @@ Gem::Specification.new do |s|
   s.name        = 'default_value_for-matchers'
   s.version     = DefaultValueFor::Matchers::VERSION
   s.authors     = 'kami'
-  s.email       = 'kami30k@gmail.com'
+  s.email       = 'hiroki.zenigami@gmail.com'
 
   s.summary     = 'RSpec matchers for default_value_for gem.'
   s.description = 'RSpec matchers for default_value_for gem.'
-  s.homepage    = 'https://github.com/kami30k/default_value_for-matchers'
+  s.homepage    = 'https://github.com/kami-zh/default_value_for-matchers'
   s.license     = 'MIT'
 
   s.files       = `git ls-files -z`.split("\x0")
